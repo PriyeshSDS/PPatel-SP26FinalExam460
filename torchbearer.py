@@ -32,9 +32,15 @@ def explain_problem():
         Your Part 1 README answers, written as a string.
         Must match what you wrote in README Part 1.
 
-    TODO
     """
-    return "TODO"
+    return '''Why a single shortest-path run from S is not enough:**
+                A shortest path is not enough because we need to go too all relic chambers at least once before reaching the exit.
+            What decision remains after all inter-location costs are known:**
+                Which ordering of relic chambers minimizes the torch cost.
+            Why this requires a search over orders (one sentence):**
+                This requires a search over orders so that we can find the best path to minimize the torch fuel cost.
+            '''
+
 
 
 # =============================================================================

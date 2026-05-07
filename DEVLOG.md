@@ -10,12 +10,14 @@
 
 ---
 
-## Entry 1 – [Date]: Initial Plan
+## Entry 1 – 05/07/26: Initial Plan
 
-> Required. Write this before writing any code. Describe your plan: what you will
-> implement first, what parts you expect to be difficult, and how you plan to test.
 
-_Your entry here._
+I will start by implementing in the order of the parts given in the assignment markdown
+file this means I will implement select sources first. 
+I think that getting the correct optimal route will be the most difficult.
+I will test using the already given test cases as I go. 
+
 
 ---
 

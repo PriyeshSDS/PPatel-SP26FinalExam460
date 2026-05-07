@@ -12,18 +12,14 @@
 ---
 
 ## Part 1: Problem Analysis
-
-> Document why this problem is not just a shortest-path problem. Three bullet points, one
-> per question. Each bullet should be 1-2 sentences max.
-
 - **Why a single shortest-path run from S is not enough:**
-  _Your answer here._
+  A shortest path is not enough because we need to go too all relic chambers at least once before reaching the exit.
 
 - **What decision remains after all inter-location costs are known:**
-  _Your answer here._
+  Which ordering of relic chambers minimizes the torch cost.
 
 - **Why this requires a search over orders (one sentence):**
-  _Your answer here._
+  This requires a search over orders so that we can find the best path to minimize the torch fuel cost.
 
 ---
 
