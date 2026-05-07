@@ -18,6 +18,7 @@ Submit this file as: torchbearer.py
 """
 
 import heapq
+from multiprocessing.connection import default_family
 
 
 # =============================================================================
@@ -59,8 +60,6 @@ def select_sources(spawn, relics, exit_node):
     -------
     list[node]
         No duplicates. Order does not matter.
-
-
     """
     return list(set([spawn] + relics))
 
@@ -79,9 +78,34 @@ def run_dijkstra(graph, source):
         Minimum cost from source to every node in graph.
         Unreachable nodes map to float('inf').
 
-    TODO
     """
-    pass
+    #create dict
+    dist = {}
+    #set all nodes to unreachable
+    for node in graph:
+        dist[node] = float('inf')
+    #set distance to start to 0
+    dist[source] = 0
+
+    pq = [(0,source)]
+
+
+    while pq:
+        curDist, curNode = heapq.heappop(pq)
+
+        if(curDist > dist[curNode]):
+            continue
+
+        for neighbor, cost in graph[curNode]:
+            newDist = dist[curNode] + cost
+
+            if(newDist < dist[neighbor]):
+                dist[neighbor] = newDist
+                heapq.heappush(pq, (newDist, neighbor))
+    return dist
+
+
+
 
 
 def precompute_distances(graph, spawn, relics, exit_node):

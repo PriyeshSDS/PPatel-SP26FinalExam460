@@ -38,13 +38,13 @@
 
 > Fill in the table. No prose required.
 
-| Property | Your answer |
-|---|---|
-| Data structure name | |
-| What the keys represent | |
-| What the values represent | |
-| Lookup time complexity | |
-| Why O(1) lookup is possible | |
+| Property | Your answer                                     |
+|---|-------------------------------------------------|
+| Data structure name | dictionary                                      |
+| What the keys represent | nodes                                           |
+| What the values represent | torch cost to get to the key                    |
+| Lookup time complexity | O(1)                                            |
+| Why O(1) lookup is possible | dictionary uses hashtable which has O(1) look up |
 
 ### Part 2c: Precomputation Complexity
 
