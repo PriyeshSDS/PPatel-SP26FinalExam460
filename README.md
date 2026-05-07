@@ -29,10 +29,10 @@
 
 > List the source node types as a bullet list. For each, one-line reason.
 
-| Source Node Type | Why it is a source |
-|---|---|
-| _node type_ | _one-line reason_ |
-| _node type_ | _one-line reason_ |
+| Source Node Type | Why it is a source                                                  |
+|----------------|---------------------------------------------------------------------|
+| _spawn node_   | This is where we start from to get to a relic                       |
+| relic chamber  | after a relic chamber we can either go to another relic or the exit |
 
 ### Part 2b: Distance Storage
 

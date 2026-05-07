@@ -60,9 +60,9 @@ def select_sources(spawn, relics, exit_node):
     list[node]
         No duplicates. Order does not matter.
 
-    TODO
+
     """
-    pass
+    return list(set([spawn] + relics))
 
 
 def run_dijkstra(graph, source):
