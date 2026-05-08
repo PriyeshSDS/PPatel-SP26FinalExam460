@@ -27,16 +27,12 @@
 
 ### Part 2a: Source Selection
 
-> List the source node types as a bullet list. For each, one-line reason.
-
 | Source Node Type | Why it is a source                                                  |
 |----------------|---------------------------------------------------------------------|
 | _spawn node_   | This is where we start from to get to a relic                       |
 | relic chamber  | after a relic chamber we can either go to another relic or the exit |
 
 ### Part 2b: Distance Storage
-
-> Fill in the table. No prose required.
 
 | Property | Your answer                                     |
 |---|-------------------------------------------------|
@@ -48,12 +44,10 @@
 
 ### Part 2c: Precomputation Complexity
 
-> State the total complexity and show the arithmetic. Two to three lines max.
-
-- **Number of Dijkstra runs:** _your answer_
-- **Cost per run:** _your answer_
-- **Total complexity:** _your answer_
-- **Justification (one line):** _your answer_
+- **Number of Dijkstra runs:** k + 1
+- **Cost per run:** mlogn
+- **Total complexity:** O(mlogn)
+- **Justification (one line):** we run once from the start and then from every relic chamber. This is O(mlogn)
 
 ---
 
