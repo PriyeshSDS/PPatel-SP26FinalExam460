@@ -18,8 +18,6 @@ Submit this file as: torchbearer.py
 """
 
 import heapq
-from multiprocessing.connection import default_family
-
 
 # =============================================================================
 # PART 1
