@@ -102,34 +102,25 @@ to find the lowest cost path.
 ## Part 5: State and Search Space
 
 ### Part 5a: State Representation
-
-> Document the three components of your search state as a table.
-> Variable names here must match exactly what you use in torchbearer.py.
-
-| Component | Variable name in code | Data type | Description |
-|---|---|---|---|
-| Current location | | | |
-| Relics already collected | | | |
-| Fuel cost so far | | | |
+| Component | Variable name in code | Data type | Description                          |
+|---|-----------------------|-----------|--------------------------------------|
+| Current location | current_loc                | node      | where the the current route ends     |
+| Relics already collected | relics_visited_order                | list      | The relics collected so far in order |
+| Fuel cost so far | cost_so_far               | float     | The total fuel cost so fara          |
 
 ### Part 5b: Data Structure for Visited Relics
-
-> Fill in the table.
-
-| Property | Your answer |
-|---|---|
-| Data structure chosen | |
-| Operation: check if relic already collected | Time complexity: |
-| Operation: mark a relic as collected | Time complexity: |
-| Operation: unmark a relic (backtrack) | Time complexity: |
-| Why this structure fits | |
+| Property | Your answer                                  |
+|---|----------------------------------------------|
+| Data structure chosen | set                                          |
+| Operation: check if relic already collected | Time complexity:O(1)                         |
+| Operation: mark a relic as collected | Time complexity:O(1)                         |
+| Operation: unmark a relic (backtrack) | Time complexity:O(1)                         |
+| Why this structure fits | a set is fast when adding or removing relics |
 
 ### Part 5c: Worst-Case Search Space
 
-> Two bullets.
-
-- **Worst-case number of orders considered:** _Your answer (in terms of k)._
-- **Why:** _One-line justification._
+- **Worst-case number of orders considered:** k!
+- **Why:** There are k orders for the first and k-1 for the next ... to 1 this is a factorial
 
 ---
 
@@ -137,31 +128,24 @@ to find the lowest cost path.
 
 ### Part 6a: Best-So-Far Tracking
 
-> Three bullets.
-
-- **What is tracked:** _Your answer here._
-- **When it is used:** _Your answer here._
-- **What it allows the algorithm to skip:** _Your answer here._
+- **What is tracked:** The lowest route cost so far with the corresponding relic order
+- **When it is used:** Before adding to the route it is checked and updated after all relic have been reached and going to the exit
+- 
+- **What it allows the algorithm to skip:** The algorithm can skip any route that has a cost at least the cur cost so far
 
 ### Part 6b: Lower Bound Estimation
-
-> Three bullets.
-
-- **What information is available at the current state:** _Your answer here._
-- **What the lower bound accounts for:** _Your answer here._
-- **Why it never overestimates:** _Your answer here._
+- **What information is available at the current state:** we know the current location, remaining relics, our current relic order, and the
+current cost
+- **What the lower bound accounts for:** The fuel already spend
+- **Why it never overestimates:** Its given that all routes are non negative, so we know 
+adding a route wont decrease the cost.
 
 ### Part 6c: Pruning Correctness
-
-> One to two bullets. Explain why pruning is safe.
-
-- _Your answer here._
+- if the lower bound is has a higher cost than the best route so far it doesnt beat it
+- Since all routes are non negative we can get rid of this branch because it cant contain the optimal solution
 
 ---
 
 ## References
-
-> Bullet list. If none beyond lecture notes, write that.
-
 - Lecture notes
 - https://www.geeksforgeeks.org/dsa/dijkstras-shortest-path-algorithm-greedy-algo-7/

@@ -42,7 +42,17 @@ because it would reach all the relic chambers, I then made it so that it first g
 
 ---
 
-## Entry 4 – [Date]: Post-Implementation Reflection
+
+## Entry 4 – 05/09/26: Finishing explore recursion
+
+when writing the explore function for part 6, the hardest part was making sure
+to keep track of how the recursion changes what we need to search
+without changing the other branches. I had to make sure that
+when I choose a relic I have to remove it from the remaining relics list and add it to the 
+relics visited list. But after the recursion I need to undo this.
+
+---
+## Entry 5 – [Date]: Post-Implementation Reflection
 
 > Required. Written after your implementation is complete. Describe what you would
 > change or improve given more time.
@@ -56,13 +66,13 @@ _Your entry here._
 > Required. Estimate minutes spent per part. Honesty is expected; accuracy is not graded.
 
 | Part | Estimated Hours |
-|---|-----------------|
-| Part 1: Problem Analysis | 1               |
-| Part 2: Precomputation Design | 2               |
-| Part 3: Algorithm Correctness | 1               |
-| Part 4: Search Design | 1               |
-| Part 5: State and Search Space |                 |
-| Part 6: Pruning |                 |
-| Part 7: Implementation |                 |
-| README and DEVLOG writing |                 |
-| **Total** |                 |
+|---|----------------|
+| Part 1: Problem Analysis | 1              |
+| Part 2: Precomputation Design | 2              |
+| Part 3: Algorithm Correctness | 1              |
+| Part 4: Search Design | 1              |
+| Part 5: State and Search Space | 1              |
+| Part 6: Pruning | 1              |
+| Part 7: Implementation |                |
+| README and DEVLOG writing |                |
+| **Total** |                |
