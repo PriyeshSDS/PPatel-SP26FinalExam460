@@ -33,9 +33,12 @@ starts to make sure it starts.
 
 ---
 
-## Entry 3 – [Date]: [Short description]
+## Entry 3 – 05/08/26: Figuring out why greedy fails
 
-_Your entry here._
+When figuring out the greedy algorithm I at first tried to just say the 
+greedy alogithm would always choose the cheapest path to the end, but this doesnt work
+because it would reach all the relic chambers, I then made it so that it first goes to a relic chambers
+. Even with this greedy still doesnt work, but it does make more sense. 
 
 ---
 
@@ -56,7 +59,7 @@ _Your entry here._
 |---|-----------------|
 | Part 1: Problem Analysis | 1               |
 | Part 2: Precomputation Design | 2               |
-| Part 3: Algorithm Correctness |                 |
+| Part 3: Algorithm Correctness | 1               |
 | Part 4: Search Design |                 |
 | Part 5: State and Search Space |                 |
 | Part 6: Pruning |                 |

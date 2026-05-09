@@ -52,60 +52,50 @@
 ---
 
 ## Part 3: Algorithm Correctness
-
-> Document your understanding of why Dijkstra produces correct distances.
-> Bullet points and short sentences throughout. No paragraphs.
-
 ### Part 3a: What the Invariant Means
 
-> Two bullets: one for finalized nodes, one for non-finalized nodes.
-> Do not copy the invariant text from the spec.
-
 - **For nodes already finalized (in S):**
-  _Your answer here._
+  dist[x] where x is a node then dist[x] holds the actual shortest distance from a source s.
 
 - **For nodes not yet finalized (not in S):**
-  _Your answer here._
+  dist[x] where x is a node then dist[x] is the shortest distance proven so far from a source s.
 
 ### Part 3b: Why Each Phase Holds
-
-> One to two bullets per phase. Maintenance must mention nonnegative edge weights.
-
 - **Initialization : why the invariant holds before iteration 1:**
-  _Your answer here._
+  Before the first iteration S is empty so none of the nodes are finalized, so we set them to inf,
+because no path has been found so far.
 
 - **Maintenance : why finalizing the min-dist node is always correct:**
-  _Your answer here._
+  We can finalize the minimum dist node because there are no better paths because choosing a alternative path 
+will always increase the cost since there are no negative edges.
 
 - **Termination : what the invariant guarantees when the algorithm ends:**
-  _Your answer here._
+  When the algorithm ends all nodes have been finalized and we have gone through all of Dijkstra's
+this means we have the actual shortest distances. And any nodes that are still inf are unreachable.
 
 ### Part 3c: Why This Matters for the Route Planner
+Having the correct shortest distance from the important locations is important
+because we use it to create the best route between the intrest points to minimize cost.
 
-> One sentence connecting correct distances to correct routing decisions.
-
-_Your answer here._
-
----
 
 ## Part 4: Search Design
 
 ### Why Greedy Fails
 
-> State the failure mode. Then give a concrete counter-example using specific node names
-> or costs (you may use the illustration example from the spec). Three to five bullets.
-
-- **The failure mode:** _Your answer here._
-- **Counter-example setup:** _Your answer here._
-- **What greedy picks:** _Your answer here._
-- **What optimal picks:** _Your answer here._
-- **Why greedy loses:** _Your answer here._
+- **The failure mode:**  The greedy algorithm chooses to go the cheapest relic from the current point
+but this local choice could cause more expensive choices later
+- **Counter-example setup:** Starting from S, having relics A,B and exit T. Lets use costs: S->A=1,S->B = 2, 
+A->B=100, B->A=1, A->T=1, B->T=1
+- **What greedy picks:** Greedy picks S->A for 1, Then it has to choose A->B for 100 to reach every relic chamber
+- and then B->T for one, this total cost  is 102
+- **What optimal picks:** The optimal route is S->B->A->T = 4
+- **Why greedy loses:** The greedy loses because the cheapest first step does not lead to the overall 
+best path. 
 
 ### What the Algorithm Must Explore
 
-> One bullet. Must use the word "order."
-
-- _Your answer here._
+- The algorithm must explore all possible orders of the relic chambers to the finished,
+to find the lowest cost path.
 
 ---
 
