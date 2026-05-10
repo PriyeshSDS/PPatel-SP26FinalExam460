@@ -312,10 +312,9 @@ def solve(graph, spawn, relics, exit_node):
     tuple[float, list[node]]
         (minimum_fuel_cost, ordered_relic_list)
         Returns (float('inf'), []) if no valid route exists.
-
-    TODO
     """
-    pass
+    dist = precompute_distances(graph,spawn,relics,exit_node)
+    return find_optimal_route(dist,spawn,relics,exit_node)
 
 
 # =============================================================================
