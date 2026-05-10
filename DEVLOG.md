@@ -52,27 +52,28 @@ when I choose a relic I have to remove it from the remaining relics list and add
 relics visited list. But after the recursion I need to undo this.
 
 ---
-## Entry 5 – [Date]: Post-Implementation Reflection
+## Entry 5 – 05/10/24: Post-Implementation Reflection
 
 > Required. Written after your implementation is complete. Describe what you would
 > change or improve given more time.
 
-_Your entry here._
+If given more time I would probably add more pruning if possible, and add checks for edge cases like
+unreachable relics or multiple paths with the same costs. 
 
 ---
 
-## Final Entry – [Date]: Time Estimate
+## Final Entry – 05/10/24: Time Estimate
 
 > Required. Estimate minutes spent per part. Honesty is expected; accuracy is not graded.
 
 | Part | Estimated Hours |
-|---|----------------|
-| Part 1: Problem Analysis | 1              |
-| Part 2: Precomputation Design | 2              |
-| Part 3: Algorithm Correctness | 1              |
-| Part 4: Search Design | 1              |
-| Part 5: State and Search Space | 1              |
-| Part 6: Pruning | 1              |
-| Part 7: Implementation |                |
-| README and DEVLOG writing |                |
-| **Total** |                |
+|---|-----------------|
+| Part 1: Problem Analysis | 1               |
+| Part 2: Precomputation Design | 2               |
+| Part 3: Algorithm Correctness | 1               |
+| Part 4: Search Design | 1               |
+| Part 5: State and Search Space | 1               |
+| Part 6: Pruning | 1               |
+| Part 7: Implementation | 1               |
+| README and DEVLOG writing | 1               |
+| **Total** | 9               |
