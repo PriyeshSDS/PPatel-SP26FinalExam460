@@ -42,7 +42,7 @@
 
 - **Number of Dijkstra runs:** k + 1
 - **Cost per run:** mlogn
-- **Total complexity:** O(mlogn)
+- **Total complexity:** O((k+1)*mlogn)
 - **Justification (one line):** we run once from the start and then from every relic chamber. This is O(mlogn)
 
 ---
